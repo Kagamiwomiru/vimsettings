@@ -29,8 +29,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimfiler'
 nnoremap <Space>f :VimFiler -split -simple -winwidth=30 -no-quit<ENTER> 
-nnoremap <Space>q :q
-
+nnoremap <Space>q :q<ENTER>
+nnoremap <Space>w :w<ENTER>
 NeoBundle 'Shougo/unite.vim'
 " vimproc
 
@@ -45,6 +45,8 @@ NeoBundle 'Townk/vim-autoclose'
 " syntastic 構文チェッカー
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-easymotion'
+
+NeoBundleLazy 'pangloss/vim-javascript', {'filetypes': ['html', 'php', 'javascript']}
 
 " Neobundle を終了する
 call neobundle#end()
